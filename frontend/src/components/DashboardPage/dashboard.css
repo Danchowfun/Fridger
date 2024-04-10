@@ -1,0 +1,402 @@
+.dashboard {
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff; /* Dark background for the main area */
+}
+
+.navigation-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 230px;
+  background-color: #3b618f; /* Darker shade for the navigation bar */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #001943; /* Light text color for better readability */
+}
+
+.logo-section {
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center; /* Vertically aligns the image and text */
+  font-size: 32px; /* Adjusted for balance */
+  color: #ffffff; /* White text for logo */
+  font-weight: bold;
+  gap: 7px;
+  margin: 20px;
+}
+
+.logo {
+  width: 70px; /* Adjust this value as needed */
+  height: auto; /* Keeps the aspect ratio */
+  object-fit: contain;
+}
+
+.links-section {
+  flex-grow: 1;
+  margin: 10px;
+}
+
+.links-section a {
+  display: block;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #001943; /* Dark navy for links */
+  padding: 10px 15px;
+  background-color: #c8e6f3; /* Light blue background for links */
+  margin: 5px 0; /* Added spacing */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.links-section a:hover,
+.links-section a:focus {
+  background-color: #ffffff; /* White background for hover/focus */
+  color: #3b618f; /* Secondary blue text for contrast */
+  border: 1px solid #001943; /* Adding a border for definition */
+}
+
+.links-section a:active {
+  background-color: #007bff; /* Dark background for active state */
+  color: #ffffff;
+}
+
+.links-section .active-link {
+  background-color: #007bff; /* Background color for active link */
+  color: #fff; /* White text for active link */
+}
+
+.user-section {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: #001943;
+  color: #ffffff; /* Secondary blue text for contrast */
+  gap: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.user-popup {
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  background-color: #c8e6f3; /* Dark background for popup */
+  border: 1px solid #444; /* Dark border for popup */
+  width: 90%;
+  z-index: 100;
+  margin: 10px;
+}
+
+.user-popup a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #001943; /* Light text color for popup links */
+  border-bottom: 1px solid #3c3c3c; /* Dark border for separating links */
+}
+
+.user-popup a:last-child {
+  border-bottom: none;
+}
+
+.main-content {
+  width: 100%;
+  margin-left: 230px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color: #001943; /* Lighter text color for main content */
+  height: calc(100vh - 40px); /* Adjust if you have additional headers or footers */
+  overflow: hidden; /* Ensures no scroll on the main content */
+}
+
+
+
+
+
+
+
+
+.grocery-manager {
+  background-color: #c8e6f3;/* Light blue for sections, suggesting a cool, airy feel */
+  color: #001943; /* Maintaining dark navy for text */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: visible; /* Ensures this container doesn't scroll */
+  flex: 1; /* Allows this container to fill available space */
+}
+
+.title-container {
+  background-color: #c8e6f3; 
+  font-size: xx-large;
+  color: #001943;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.item-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow-y: auto; /* Scroll only this list */
+  /* Dynamic calculation for max-height */
+  max-height: calc(100vh - 350px); /* Adjust the subtracted value based on the total height of other elements */
+  padding-right: 0px;
+}
+
+.item-list::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.item-list::-webkit-scrollbar-track {
+  background: #c8e6f3; /* Scrollbar track color */
+}
+
+.item-list::-webkit-scrollbar-thumb {
+  background-color: #3b618f; /* Scrollbar handle color */
+  border-radius: 4px; /* Roundness of the scrollbar handle */
+}
+
+/* Custom scrollbar for Firefox */
+.item-list {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #3b618f #c8e6f3; /* thumb and track color */
+}
+
+.item-container {
+  background-color: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start;
+  padding: 15px 10px 15px 20px;
+  position: relative;
+  overflow: hidden;
+  margin: 5px 0; /* Add a little margin for spacing */
+  min-width: 150px; /* Adjust based on your layout */
+  transition: all 0.2s ease-in-out; /* Smooth transition for expansion */
+  opacity: 1; /* Make sure item is fully opaque when not being removed */
+}
+
+.item-container svg {
+  width: 30px; /* Set a fixed width for the logo */
+  height: 30px; /* Set a fixed height for the logo */
+  flex-shrink: 0; /* Prevent the logo from shrinking */
+  padding-right: 10px;
+}
+
+.item-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  padding-right: 20px;
+}
+
+.item-name, .item-expiration {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-name {
+  font-weight: bold;
+}
+
+.item-expiration {
+  color: #aaa;
+  font-size: 0.8em;
+}
+
+.item-container.expanded { 
+  padding-right: 40px;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2); /* Optional: Add a shadow for depth */
+}
+
+.item-container.expanded.lasted { 
+  padding-right: 20px;
+  padding-bottom: 20px;/* Revert padding to match non-expanded state if necessary */
+}
+
+.item-details {
+  margin-top: 10px;
+  display: none; /* Hide additional details by default */
+  font-size: 0.8em; /* Adjust font size to your preference */
+  flex-direction: column;
+  gap: 8px;
+}
+
+:root {
+  --expanded-max-width: 150px; /* Default value */
+}
+
+.item-container.expanded.lasted {
+  max-width: var(--expanded-max-width);
+}
+
+.item-container.expanded .item-details,
+.item-container.expanded .cross-action,
+.item-container.expanded .pen-action,
+.item-container.expanded .edit-actions {
+  display: flex;
+}
+
+.item-container.editing .item-details{
+  margin-bottom: 20px
+}
+
+.cross-action {
+  top: 19px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.pen-action {
+  bottom: 19px;
+  right: 26px;
+  gap: 5px; /* Space between icons */
+  cursor: pointer;
+}
+
+.edit-actions {
+  bottom: 20px;
+  right: 62px;
+  gap: 10px; /* Space between icons */
+}
+
+.item-container.expanded .action-icon.pen-icon {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.item-container.expanded .action-icon.cross-icon {
+  width: 27px;
+  height: 27px;
+  cursor: pointer;
+}
+
+.item-container.expanded .edit-action-icon {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+.item-container.expanded.editing .action-icon.cross-icon {
+  display: none; /* Hide all action icons by default */
+}
+
+.item-actions {
+  display: none; /* Hide all action icons by default */
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.item-container.expanded:not(.editing) .pen-action,
+.item-container.expanded.editing .edit-actions {
+  display: flex; /* Show pen-action only when expanded and not editing, edit-actions only when editing */
+}
+
+
+
+
+.receipt-uploader {
+  background-color: #c8e6f3;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  align-items: stretch;
+  /* Removed flex-grow to control size explicitly */
+  margin-top: 10px; /* Add some space between sections */
+}
+
+.upload-bar {
+  font-size: xx-large;
+  background-color: #c8e6f3;
+  color: #001943;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: space-between; /* Aligns children (any text and the button) on opposite ends */
+  align-items: center; /* Center-align items vertically */
+}
+
+/* Styling for the upload button */
+.upload-bar button {
+  margin-left: auto; /* This pushes the button to the right */
+  padding: 10px 20px; /* Add some padding for better appearance */
+  background-color: #4CAF50; /* Adjusted color for better visibility in dark mode */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners for the button */
+  cursor: pointer; /* Change cursor to indicate it's clickable */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.upload-bar button:hover {
+  background-color: #367c39; /* Darken the button on hover for feedback */
+}
+
+.upload-bar button:disabled {
+  background-color: #cccccc; /* Gray out the button when disabled */
+  cursor: not-allowed; /* Show the not-allowed cursor icon */
+}
+
+.upload-bar button.loading {
+  background-color: #cccccc; /* Loading state background color */
+  cursor: wait; /* Cursor indicates waiting */
+}
+
+/* Additional styles for drag-and-drop area */
+.drag-zone {
+  border: 1px dashed #a5a4a4; /* Dashed border for the dropzone */
+  background-color: #c6e6f3;
+  padding: 30px;
+  color: #001943; /* Lighter text color for the dropzone area */
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  margin: 5px;
+}
+.file-info {
+  color: #001943; /* Light color for visibility in dark mode */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between; /* Align file info and remove button on opposite ends */
+  align-items: center; /* Center items vertically */
+}
+
+.file-info button {
+  background-color: #ff4747; /* Red color for the remove button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.file-info button:hover {
+  background-color: #ac1717; /* Darker shade on hover */
+}

@@ -1,0 +1,127 @@
+body, input, button, select, option {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #001943; /* White text for better contrast */
+  background-color: #ffffff; /* Dark navy blue background */
+}
+
+a {
+  color: #3b618f; /* Light blue for links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #001943; /* White for hover state */
+  text-decoration: underline;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(to right, #c8e6f3, #ffffff); /* Gradient from secondary blue to primary dark blue */
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #3b618f; /* Light blue color for the logo text */
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-item, .cta-button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out, background-color 0.2s;
+  color: #001943; /* White text for buttons */
+}
+
+.nav-item:hover, .cta-button:hover {
+  transform: scale(1.1);
+  background-color: #3b618f; /* Light blue background on hover */
+}
+
+.cta-button {
+  background-color: #c8e6f3; /* Secondary blue */
+  color: #001943; /* White text */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.cta-button:hover {
+  background-color: #ffffff; /* Darker blue on hover */
+}
+
+/* Main Content */
+main {
+  padding: 40px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #3b618f;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.features-section {
+  margin-top: 60px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.feature-item {
+  background-color: #c8e6f3; /* Consider changing to #c8e6f3 or #ffffff for consistency */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #c8e6f3; /* Consistent with secondary color */
+}
+
+/* Buttons */
+.cta-button.big {
+  padding: 15px 25px;
+  font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,35 @@
+/* src/App.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+form {
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,105 @@
+/* Container */
+.login-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #c8e6f3; /* Light blue background */
+  border-radius: 10px;
+  color: #001943; /* Dark navy text */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.login-header h1 {
+  margin-bottom: 24px;
+  text-align: center;
+  color: #3b618f; /* Secondary blue for header */
+}
+.login-form {
+  border: none;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #3b618f; /* Secondary blue border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+  color: #001943; /* Dark navy text */
+}
+
+.form-group input:focus {
+  border-color: #001943; /* Dark navy focus border */
+  outline: none;
+}
+.login-container .form-group input {
+  background-color: #ffffff; /* Light blue background */
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #3b618f; /* Secondary blue border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+  color: #001943; /* Dark navy text */
+}
+/* Login and Social Buttons */
+.login-button, .facebook-login, .apple-login {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #ffffff; /* White text for buttons */
+}
+
+.login-button {
+  background-color: #3b618f;
+  color: #ffffff;
+}
+.social-login {
+  max-width: 300px;
+  margin: 40px auto;
+}
+.facebook-login {
+  background-color: #3b5998;
+  color: white;
+}
+
+.apple-login {
+  background-color: #000;
+  color: white;
+}
+
+.login-button:hover, .facebook-login:hover, .apple-login:hover {
+  opacity: 0.9;
+}
+
+/* Error Message and Sign Up Link */
+.login-error {
+  color: #f44336;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-prompt {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup-link {
+  cursor: pointer;
+  color: #3b618f; 
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
