@@ -28,7 +28,7 @@ function HomePage() {
       <main>
         <section className="hero-section">
           <h1>Welcome to Fridger</h1>
-          <p>Streamline your kitchen experiences with smart grocery management.</p>
+          <p>Streamline your kitchen experience with smart grocery management.</p>
           <Link to="/register" className="cta-button big">Get Started</Link>
         </section>
 
