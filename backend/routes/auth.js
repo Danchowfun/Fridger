@@ -29,7 +29,7 @@ router.post('/register', registerValidation, async (req, res) => {
     // Check if user already exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return res.status(400).json({ message: "Email already in use" });
+      return res.status(400).json({ message: "Email already in use. Please try other" });
     }
 
     // Create a new user with the hashed password and username
